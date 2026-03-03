@@ -1,6 +1,8 @@
 // Components:
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
+import MoviesGrid from './components/MoviesGrid.jsx' 
+
 
 import './App.css'
 import './styles.css'
@@ -11,9 +13,9 @@ function App() {
 
       <div className="container">
         <Header />
-        <Footer />        
+        <MoviesGrid />        
       </div>
-
+      <Footer />
     </div>
   )
 }
