@@ -1,5 +1,6 @@
 // Components:
 import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
 
 import './App.css'
 import './styles.css'
@@ -7,10 +8,12 @@ import './styles.css'
 function App() {
   return (
     <div className="App">
-      <Header />
-      <footer className="footer">
-        <p className="footer">Footer content here</p>
-      </footer>
+
+      <div className="container">
+        <Header />
+        <Footer />        
+      </div>
+
     </div>
   )
 }
