@@ -39,6 +39,25 @@ export default function TicketForm(){
                   value={desc} 
                   onChange={e => setDesc(e.target.value)} />
       </div>
+
+      <fieldset className="priority-fieldset">
+        <legend>Priority</legend>
+
+        {
+          Object.entries(priorityLabels).map(([value, label]) => (
+            <label key={value} className='priority-label'>
+              <input type="radio" value={value}
+                      checked={priority === value} 
+                      className='priority-input'
+                      onChange={(e) => setPriority(e.target.value)}
+                      />
+              {label}
+            </label>
+          ))
+        }
+      </fieldset>
+
+      <input type="submit" className='button' />
     </form>
   </> 
 } 
