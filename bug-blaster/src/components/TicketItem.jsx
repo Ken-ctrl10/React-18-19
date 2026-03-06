@@ -1,6 +1,6 @@
 export default function TicketItem({ticket, dispatch}){
   
-  const {id, title, desc, priority} = ticket;
+  const {id, title, desc} = ticket; //i remove the priority from the destructuring of the tickets so if something went wrong you can put it back.
 
   const priorityClass = {
     1: "priority-low",

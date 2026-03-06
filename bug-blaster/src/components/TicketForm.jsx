@@ -13,6 +13,7 @@ export default function TicketForm({dispatch, editingTicket}){
           setPriority(editingTicket.priority)
       }
       else{
+        // eslint-disable-next-line react-hooks/immutability
         clearForm();
       }
 
