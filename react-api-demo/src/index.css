@@ -13,6 +13,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* This is related to the api-demo project */
+h2{
+  text-align: left;
+}
+
+p{
+  text-align: left;
+}
+
+/* --------------------------------------- */
+
 a {
   font-weight: 500;
   color: #646cff;

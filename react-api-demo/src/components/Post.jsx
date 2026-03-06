@@ -6,7 +6,7 @@ export default function Post(){
   useEffect(() => {
     getPosts()
       .then((result) => {
-        console.log(result);
+        setPost(result.data)
       })
       .catch((err) => {
         console.error(err);
@@ -14,5 +14,19 @@ export default function Post(){
 
   }, []); 
   
-  return(<></>);
+  return(
+    <div>
+      <h1>Posts:</h1>
+      <ul>
+        {
+          post.map(post => (
+            <li key={post.id}>
+              <h2>{post.title}</h2>
+              <p>{post.body}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  );
 }
