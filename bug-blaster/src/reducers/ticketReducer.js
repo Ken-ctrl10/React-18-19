@@ -40,6 +40,7 @@ export default function ticketReducer(state, action){
             ...state,
             editingTicket: action.payload
           };
+          
       case "CLEAR_EDITING_TICKET":
           return{
             ...state,

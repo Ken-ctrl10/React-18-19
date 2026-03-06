@@ -48,6 +48,13 @@ export default function TicketForm({dispatch, editingTicket}){
     setPriority("1");
   }
 
+  function handleEditCancel(){
+    dispatch({
+      type: "CLEAR_EDITING_TICKET"
+    })
+    clearForm();
+  }
+
   return <>
     <form action="" className='ticket-form' onSubmit={handleSubmit}>
       <div>
@@ -84,6 +91,10 @@ export default function TicketForm({dispatch, editingTicket}){
       </fieldset>
 
       <input type="submit" className='button' />
+
+      {editingTicket && (
+        <button className='button' onClick={handleEditCancel}>Cancel Button</button>
+      )}
     </form>
   </> 
 } 
