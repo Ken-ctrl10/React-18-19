@@ -2,8 +2,10 @@ import axios from 'axios';
 
 const api = axios.create(
   {
-    baseURL: 'https://jsonplaceholder.typicode.com'
+    baseURL: 'https://jsonplaceholder.typicode.com',
   }
 );
 
-const getPosts =
+const getPosts = () => api.get("/posts");
+
+export { getPosts };
