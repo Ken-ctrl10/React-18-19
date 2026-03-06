@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function TicketForm(){
+export default function TicketForm({dispatch}){
 
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
@@ -16,13 +16,16 @@ export default function TicketForm(){
     e.preventDefault(); // This make sure that our web page doesnt reloads.
 
     const ticketData = {
-      id: new Date.toISOString(),
+      id: new Date().toISOString(),
       title,
       desc,
       priority
     }
 
-
+    dispatch({
+      type: "ADD_TICKET",
+      payload: ticketData
+    })
 
     clearForm();
   }
@@ -32,6 +35,7 @@ export default function TicketForm(){
     setDesc("");
     setPriority("1");
   }
+
   return <>
     <form action="" className='ticket-form' onSubmit={handleSubmit}>
       <div>
