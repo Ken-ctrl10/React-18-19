@@ -9,7 +9,7 @@ export function BookDetails() {
   const books = useContext(BooksContext);
   const book = books.find(b => b.id === parseInt(bookID));
   
-  if (Books.length === 0) {
+  if (books.length === 0) {
     return <div>Page Loading...</div>;
   }
 
